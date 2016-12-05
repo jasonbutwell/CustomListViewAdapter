@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/gallery_thumb"
+        android:id="@+id/personImage"
+        android:maxHeight="180dp"
+        android:maxWidth="180dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true" />
+
+    <TextView
+    android:text="FirstName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/firstName"
+    android:layout_toRightOf="@+id/personImage"
+    android:layout_toEndOf="@+id/personImage"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginStart="12dp"
+    android:textStyle="normal|bold"
+    android:textSize="18sp" />
+
+    <TextView
+        android:text="Surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/secondName"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:textStyle="normal|bold"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/firstName"
+        android:layout_alignBottom="@+id/firstName"
+        android:layout_toRightOf="@+id/firstName"
+        android:layout_toEndOf="@+id/firstName" />
+
+    <TextView
+        android:text="Age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/age"
+        android:textStyle="normal"
+        android:textSize="12sp"
+        android:layout_marginTop="6dp"
+        android:layout_below="@+id/jobTitle"
+        android:layout_alignLeft="@+id/jobTitle"
+        android:layout_alignStart="@+id/jobTitle" />
+
+    <TextView
+        android:text="JobTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/jobTitle"
+        android:textStyle="normal"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/firstName"
+        android:layout_alignLeft="@+id/firstName"
+        android:layout_alignStart="@+id/firstName" />
+
+</RelativeLayout>
