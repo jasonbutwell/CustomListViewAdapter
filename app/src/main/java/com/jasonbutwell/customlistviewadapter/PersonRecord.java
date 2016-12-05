@@ -44,6 +44,10 @@ public class PersonRecord {
         this.jobTitle = jobTitle;
     }
 
+    public String getAgeString() {
+        return String.valueOf(age)+" years old";
+    }
+
     public int getAge() {
         return age;
     }

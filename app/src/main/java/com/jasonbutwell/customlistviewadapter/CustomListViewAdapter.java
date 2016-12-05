@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -48,19 +47,19 @@ public class CustomListViewAdapter extends BaseAdapter {
         if (convertView == null) {
 
             LayoutInflater customInflater = LayoutInflater.from(context);
-            row = customInflater.inflate(R.layout.row ,parent, false);
+            row = customInflater.inflate(R.layout.row, parent, false);
 
             TextView firstName = (TextView)row.findViewById(R.id.firstName);
             TextView secondName = (TextView)row.findViewById(R.id.secondName);
             TextView jobTitle = (TextView)row.findViewById(R.id.jobTitle);
             TextView age = (TextView)row.findViewById(R.id.age);
-            ImageView image = (ImageView)row.findViewById(R.id.personImage);
+            //ImageView image = (ImageView)row.findViewById(R.id.personImage);
 
             // Set the row values based on the record being indexed
-            firstName.setText(people.get(position).getFirstName());
-            secondName.setText(people.get(position).getSecondName());
-            jobTitle.setText(people.get(position).getJobTitle());
-            age.setText(people.get(position).getAge());
+              firstName.setText(people.get(position).getFirstName());
+              secondName.setText(people.get(position).getSecondName());
+              jobTitle.setText(people.get(position).getJobTitle());
+              age.setText(people.get(position).getAgeString());
 
             // Sets the image here if we have one
             //image.setImageResource(people.get(position).getImageID());
