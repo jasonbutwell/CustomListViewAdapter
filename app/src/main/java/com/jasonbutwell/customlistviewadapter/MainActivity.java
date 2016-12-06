@@ -15,18 +15,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Initialise our ArrayList for our people
         people = new ArrayList<>();
 
         // put some data in our person records
 
         // String firstName, String secondName, String jobTitle, int age, int imageID
+        people.add( new PersonRecord( "Jason", "Butwell", "Android Developer", 42, R.drawable.jason ) );
+        people.add( new PersonRecord( "Nick", "Whitelegg", "University Lecturer", 45, R.drawable.nick ) );
+        people.add( new PersonRecord( "Ray", "Butcher", "Professional Musician", 42, R.drawable.ray ) );
+        people.add( new PersonRecord( "Joe", "Blogs", "Retired", 76, -1 ) );
 
-        people.add(new PersonRecord("Jason","Butwell","Android Developer",42,0));
 
-        CustomListViewAdapter customListViewAdapter = new CustomListViewAdapter(this,people);
-        ListView peopleListView = (ListView)findViewById(R.id.listView);
-        peopleListView.setAdapter(customListViewAdapter);
-
+        ListView peopleListView = (ListView)findViewById( R.id.listView );
+        peopleListView.setAdapter( new CustomListViewAdapter( this, people ) );
 
     }
 }

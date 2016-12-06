@@ -9,8 +9,8 @@
         android:layout_height="wrap_content"
         app:srcCompat="@android:drawable/gallery_thumb"
         android:id="@+id/personImage"
-        android:maxHeight="180dp"
-        android:maxWidth="180dp"
+        android:maxHeight="80dp"
+        android:maxWidth="80dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:adjustViewBounds="true" />
